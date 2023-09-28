@@ -74,12 +74,9 @@ public class Purchase {
 		} else if (!date.equals(other.date))
 			return false;
 		if (retailer == null) {
-			if (other.retailer != null)
-				return false;
-		} else if (!retailer.equals(other.retailer))
-			return false;
-		return true;
-	}
+            return other.retailer == null;
+		} else return retailer.equals(other.retailer);
+    }
 
 		
 
